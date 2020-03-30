@@ -1,0 +1,26 @@
+.form .input-form.no-error {
+  border: .5px solid transparent;
+}
+
+.form .input-form.no-error:focus {
+  border-color: gray;
+  outline: none;
+}
+
+.form .input-form.no-error:hover {
+  border-color: grey;
+}
+
+.form .input-form.error {
+  border: 0.5px solid #ff2e2e;
+}
+
+.form .input-form.error:focus {
+  border-color: red;
+  outline: none;
+}
+
+.form .input-form.error:hover {
+  border-color: red;
+}
+/*# sourceMappingURL=valid.css.map */

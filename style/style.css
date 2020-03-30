@@ -1,0 +1,740 @@
+*::before,
+*::after,
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf6d2;
+  font-family: Raleway;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  padding: .7rem  1.5rem .7rem 1.3rem;
+  min-height: 12%;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  background-color: white;
+}
+
+header .logo {
+  position: relative;
+  width: 90px;
+  height: 40px;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  header {
+    padding: 1.5% 8% 1.5% 5%;
+  }
+  header .logo {
+    width: 140px;
+    height: 60px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  header {
+    padding: 1.5% 15% 1.5% 10%;
+  }
+  header .logo {
+    width: 140px;
+    height: 60px;
+  }
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main {
+    height: 100%;
+  }
+}
+
+main .first-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 12rem;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
+  main .first-container {
+    height: 14rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .first-container {
+    height: 22rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .first-container {
+    height: 30vw;
+  }
+}
+
+main .first-container::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  width: 50%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .first-container::before {
+    top: 0;
+    width: 40%;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .first-container::before {
+    height: 100%;
+    width: 30%;
+    top: 0;
+    left: -1rem;
+  }
+}
+
+main .first-container::after {
+  content: '';
+  position: absolute;
+  right: -4rem;
+  width: 58%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .first-container::after {
+    top: -2rem;
+    width: 42%;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .first-container::after {
+    width: 30%;
+    top: 0;
+    right: -1rem;
+  }
+}
+
+main .first-container .main-text {
+  font-size: 1.33rem;
+  font-weight: normal;
+  font-family: Pacifico;
+  text-align: center;
+  color: #ffd200;
+  position: relative;
+  top: -1rem;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
+  main .first-container .main-text {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .first-container .main-text {
+    font-size: 2.7rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .first-container .main-text {
+    top: -10%;
+    font-size: 3.3rem;
+  }
+}
+
+main .second-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  top: -3rem;
+}
+
+main .second-container .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  background-color: white;
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 4px 7px 0px rgba(131, 131, 131, 0.3);
+          box-shadow: 2px 4px 7px 0px rgba(131, 131, 131, 0.3);
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .second-container .form-container {
+    width: 65%;
+  }
+}
+
+main .second-container .form-container .form-head-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 .5rem 0;
+}
+
+@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
+  main .second-container .form-container .form-head-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form-head-text {
+    margin-bottom: .8rem;
+    font-size: 2.3rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .second-container .form-container .form-head-text {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+}
+
+main .second-container .form-container .form-second-text {
+  font-size: 0.5rem;
+  font-weight: 400;
+  letter-spacing: .2px;
+  line-height: .9rem;
+  width: 200px;
+  border-left: 4px solid #ffd200;
+  padding-left: .3rem;
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form-second-text {
+    font-size: .8rem;
+    width: 320px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .second-container .form-container .form-second-text {
+    line-height: 1.2rem;
+    font-size: 1.1rem;
+    width: 400px;
+  }
+}
+
+main .second-container .form-container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form {
+    width: 320px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .second-container .form-container .form {
+    width: 400px;
+  }
+}
+
+main .second-container .form-container .form .form-labels {
+  font-size: 0.5rem;
+  font-weight: 500;
+  margin: .7rem 0 .3rem 0;
+  width: inherit;
+}
+
+@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
+  main .second-container .form-container .form .form-labels {
+    font-size: .55rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form .form-labels {
+    margin: 1rem 0 .5rem 0;
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .second-container .form-container .form .form-labels {
+    margin: 1.5rem 0 .5rem 0;
+    font-size: 1rem;
+  }
+}
+
+main .second-container .form-container .form .input-form {
+  font-size: 0.6rem;
+  font-weight: 500;
+  font-family: Raleway;
+  padding: .3rem .3rem;
+  background-color: #e2e2e2;
+  border-radius: 3px;
+  width: inherit;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form .input-form {
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .second-container .form-container .form .input-form {
+    font-size: 1rem;
+  }
+}
+
+main .second-container .form-container .form .policy-text {
+  font-size: 0.2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: .5rem 0;
+  border-bottom: 0.5px solid #e2e2e2;
+  letter-spacing: .5px;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form .policy-text {
+    font-size: .4rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .second-container .form-container .form .policy-text {
+    font-size: .6rem;
+  }
+}
+
+main .second-container .form-container .form #send-button {
+  font-size: 0.5rem;
+  font-weight: 700;
+  font-family: Raleway;
+  width: 5rem;
+  height: 1.8rem;
+  background-color: #ffd200;
+  border: none;
+  -webkit-box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
+          box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
+  margin: .5rem 0 0 0;
+  border-radius: 5px;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form #send-button {
+    width: 7rem;
+    height: 2.5rem;
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  main .second-container .form-container .form #send-button {
+    width: 9rem;
+    height: 3.3rem;
+    font-size: 1rem;
+  }
+}
+
+main .second-container .form-container .form #send-button:hover {
+  background-color: #838175;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+}
+
+footer {
+  position: relative;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 8%;
+}
+
+footer::before {
+  content: "";
+  position: relative;
+  width: 2rem;
+  height: .3rem;
+  left: -37.5%;
+  top: -1.5rem;
+  background-color: #ffd200;
+  border-radius: 4px;
+}
+
+@media only screen and (min-device-width: 1024px) {
+  footer::before {
+    left: -31%;
+    top: -3rem;
+    width: 3rem;
+    height: .5rem;
+  }
+}
+
+footer .footer-nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  width: 85%;
+  padding-bottom: 5%;
+  border-bottom: 0.1px solid #a8a8a8;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  footer .footer-nav-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  footer .footer-nav-container {
+    width: 65%;
+  }
+}
+
+footer .footer-nav {
+  font-size: 0.55rem;
+  font-weight: 500;
+}
+
+footer .footer-nav h4 {
+  margin: 0 0 .4rem 0;
+}
+
+footer .footer-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 0.4rem;
+  font-weight: 400;
+  list-style-type: none;
+  padding: 0;
+}
+
+footer .footer-nav ul li {
+  margin-top: .2rem;
+}
+
+footer .footer-nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+footer .footer-nav ul li a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+footer .footer-nav ul li a:hover {
+  color: gray;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  footer .footer-nav {
+    font-size: .9rem;
+  }
+  footer .footer-nav ul {
+    font-size: .7rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  footer .footer-nav {
+    font-size: .9rem;
+  }
+  footer .footer-nav ul {
+    font-size: .8rem;
+  }
+}
+
+footer .footer-nav .social-media-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: .5rem;
+}
+
+footer .footer-nav .social-media-container a div.instagram-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  position: relative;
+}
+
+footer .footer-nav .social-media-container a div.facebook-icon {
+  position: relative;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  footer .footer-nav .social-media-container a div.instagram-icon {
+    width: 2.1rem;
+    height: 2rem;
+  }
+  footer .footer-nav .social-media-container a div.facebook-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  footer .footer-nav .social-media-container a div.instagram-icon {
+    width: 2.34rem;
+    height: 2.3rem;
+  }
+  footer .footer-nav .social-media-container a div.facebook-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+footer .footer-nav .login {
+  position: relative;
+  display: block;
+  margin-top: .5rem;
+}
+
+footer .footer-nav .login a {
+  color: black;
+  text-decoration: none;
+}
+
+footer .footer-nav .login a:hover {
+  color: gray;
+}
+
+.copyright {
+  margin: 3% 0;
+  font-size: 0.3rem;
+  font-weight: 500;
+  position: relative;
+  color: black;
+  display: block;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  .copyright {
+    font-size: .6rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  .copyright {
+    font-size: .9rem;
+  }
+}
+
+.no-webp header .logo {
+  background: url("../assets/logo.png") no-repeat center;
+  background-size: cover;
+}
+
+.no-webp main .first-container {
+  background: url("../assets/kotlet_tlo.png") repeat center;
+  background-size: cover;
+}
+
+.no-webp main .first-container::before {
+  background: url("../assets/drugi_kotlet.png") no-repeat center;
+  background-size: cover;
+}
+
+.no-webp main .first-container::after {
+  background: url("../assets/kotlet.png") no-repeat center;
+  background-size: cover;
+}
+
+.no-webp footer .footer-nav .social-media-container a div.instagram-icon {
+  background: url("../assets/instagram.png") no-repeat center;
+  background-size: cover;
+}
+
+.no-webp footer .footer-nav .social-media-container a div.facebook-icon {
+  background: url("../assets/facebook.png") no-repeat center;
+  background-size: cover;
+}
+
+.webp header .logo {
+  background: url("../assets/logo.webp") no-repeat center;
+  background-size: cover;
+}
+
+.webp main .first-container {
+  background: url("../assets/kotlet_tlo.webp") repeat center;
+  background-size: cover;
+}
+
+.webp main .first-container::before {
+  background: url("../assets/drugi_kotlet.webp") no-repeat center;
+  background-size: cover;
+}
+
+.webp main .first-container::after {
+  background: url("../assets/kotlet.webp") no-repeat center;
+  background-size: cover;
+}
+
+.webp footer .footer-nav .social-media-container a .instagram-icon {
+  background: url("../assets/instagram.webp") no-repeat center;
+  background-size: cover;
+}
+
+.webp footer .footer-nav .social-media-container a .facebook-icon {
+  background: url("../assets/facebook.webp") no-repeat center;
+  background-size: cover;
+}
+/*# sourceMappingURL=style.css.map */

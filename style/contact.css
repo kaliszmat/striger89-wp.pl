@@ -1,0 +1,28 @@
+main .second-container .form-container .form-second-text{
+	text-align: center;
+	border:none;
+}
+main .second-container .form-container .form-head-text{
+
+}
+@media only screen and (max-width: 1024px){
+	main .second-container .form-container{
+		width: 60%;
+	}
+}
+@media only screen and (max-width: 480px){
+	main .second-container .form-container .form-head-text{
+		font-size: 1.8rem;
+	}
+	main .second-container .form-container .form-second-text{
+		font-size: 0.8rem;
+	}
+}
+@media only screen and (max-width: 400px){
+	main .second-container .form-container .form-head-text{
+		font-size: 1.6rem;
+	}
+	main .second-container .form-container .form-second-text{
+		font-size: 0.7rem;
+	}
+}

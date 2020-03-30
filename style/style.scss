@@ -1,0 +1,644 @@
+*::before,
+*::after,
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$colors: (
+    "first-color": #fdf6d2,
+    "second-color": #ffd200
+);
+
+$fonts: (
+    "main-font": Raleway,
+    "second-font": Pacifico
+);
+
+$form-mobile-width: 200px;
+$form-tablet-width: 320px;
+$form-desktop-width: 400px;
+
+$mobile: 'only screen and (min-device-width: 350px) and (max-device-width: 568px)';
+
+$long-mobile: 'only screen and (min-device-height: 750px)';
+
+$tablet: 'only screen and (min-width: 480px) and (max-width: 1024px)';
+$desktop: 'only screen and (min-device-width: 1024px)';
+
+@mixin flex ($-jcont, $-aitem, $-fdir){
+    display: flex;
+    justify-content: $-jcont;
+    align-items: $-aitem;
+    flex-direction: $-fdir;
+}
+
+@mixin font($-fsize, $-fweight){
+    font-size: $-fsize;
+    font-weight: $-fweight;
+}
+
+
+body{
+    @include flex(space-between, normal, column);
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+    height: auto;
+    // max-height: 110vh;
+    margin: 0;
+    padding: 0;
+    background-color: map-get($map: $colors, $key: first-color);
+    font-family: map-get($map: $fonts, $key: main-font);
+}
+
+
+header{
+    @include flex(space-between, center, row);
+    position: relative;
+    padding: .7rem  1.5rem .7rem 1.3rem;
+    min-height: 12%;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    background-color: white;
+    
+    .logo{
+        position: relative;
+        width: 90px;
+        height: 40px;
+    }
+    
+    @media #{$tablet}{
+        padding: 1.5% 8% 1.5% 5%;
+        
+        .logo{
+            width: 140px;
+            height: 60px;
+        }
+    }
+
+    @media #{$desktop}{
+        padding: 1.5% 15% 1.5% 10%;
+        .logo{
+            width: 140px;
+            height: 60px;
+        }
+    }
+}
+
+main{
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    @media #{$desktop}{
+        height: 100%;
+    }
+
+    //container with "Tak jak ty..." text and two meal images
+    .first-container{
+        @include flex(space-between, center, row);
+        height: 12rem;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        @media #{$mobile}{
+            height: 14rem;
+        }
+
+        @media #{$tablet}{
+            height: 22rem;
+        }
+
+        @media #{$desktop}{
+            height: 30vw;
+        }
+
+        //left meal image
+        &::before{
+            content: '';
+            position: absolute;
+            // top: 2rem;
+            left: -2.5rem;
+            width: 50%;
+            height: 100%;
+        
+            // @media #{$mobile}{
+            //     top: 2rem;
+            // }
+
+            @media #{$tablet}{
+                top: 0;
+                width: 40%;
+            }
+
+            @media #{$desktop} {
+                height: 100%;
+                width: 30%;
+                top:0;
+                left:-1rem;
+            }
+        }
+
+        //right meal image
+        &::after{
+            content: '';
+            position: absolute;
+            // top: -.85rem;
+            right: -4rem;
+            width: 58%;
+            height: 100%;
+
+            // @media #{$mobile}{
+            //     top: -2.4rem;
+            // }
+
+            @media #{$tablet}{
+                top: -2rem;
+                width: 42%;
+            }
+
+            @media #{$desktop} {
+                width: 30%;
+                top: 0;
+                right: -1rem;
+            }
+        }
+
+        //"Tak jak ty,..." text
+        .main-text{
+            @include font(1.33rem, normal);
+            font-family: map-get($map: $fonts, $key: "second-font");
+            text-align: center;
+            color: map-get($map: $colors, $key: "second-color");
+            position: relative;
+            top: -1rem;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+
+            @media #{$mobile}{
+                font-size: 1.4rem;
+            }
+
+            @media #{$tablet}{
+                font-size: 2.7rem;
+            }
+
+            @media #{$desktop}{
+                top: -10%;
+                font-size: 3.3rem;
+            }
+        }
+
+    }
+    
+    //form container
+    .second-container{
+        @include flex(center, normal, row);
+        position: relative;
+        top: -3rem;
+        
+        .form-container{
+            @include flex(normal, center, column);
+            width: 90%;
+            background-color: white;
+            padding: 1.5rem 0;
+            border-radius: 10px;
+            box-shadow: 2px 4px 7px 0px rgba(131, 131, 131, 0.3);
+
+            @media #{$tablet}{
+                width: 80%;
+            }
+
+            @media #{$desktop}{
+                width: 65%;
+            }
+            //"Specjalne okazje!" text
+            .form-head-text{
+                @include font(1.3rem, 700);
+                margin: 0 0 .5rem 0;
+
+                @media #{$mobile}{
+                    font-size: 1.5rem;
+                }
+
+                @media #{$tablet}{
+                    margin-bottom: .8rem;
+                    font-size: 2.3rem;
+                }
+
+                @media #{$desktop}{
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                }
+            }
+
+            //"Zapisz sie" text
+            .form-second-text{
+                @include font(.5rem, 400);
+                letter-spacing: .2px;
+                line-height: .9rem;
+                width: $form-mobile-width;
+                border-left: 4px solid map-get($map: $colors, $key: second-color);
+                padding-left: .3rem;
+                border-radius: 3px;
+
+                @media #{$tablet}{
+                    font-size: .8rem;
+                    width: $form-tablet-width;
+                    // margin-bottom: .8rem;
+                }
+
+                @media #{$desktop}{
+                    line-height: 1.2rem;
+                    font-size: 1.1rem;
+                    width: $form-desktop-width;
+                }
+            }
+
+            //whole form styling 
+            .form{
+                @include flex(normal, center, column);
+                width: $form-mobile-width;
+
+                @media #{$tablet}{
+                    width: $form-tablet-width;
+                }
+
+                @media #{$desktop} {
+                    width: $form-desktop-width;  
+                    // margin-bottom: 3%; 
+                }
+
+                .form-labels{
+                    @include font(.5rem, 500);
+                    margin: .7rem 0 .3rem 0;
+                    width: inherit;
+
+                    @media #{$mobile}{
+                        font-size: .55rem;
+                    }
+
+                    @media #{$tablet}{
+                        margin: 1rem 0 .5rem 0;
+                        font-size: .8rem;
+                    }
+
+                    @media #{$desktop}{
+                        margin: 1.5rem 0 .5rem 0;
+                        font-size: 1rem;
+                    }
+                }
+
+                .input-form{
+                    @include font(.6rem, 500);
+                    font-family: map-get($map: $fonts, $key: main-font);
+                    padding: .3rem .3rem;
+                    background-color: rgb(226, 226, 226);
+                    border-radius: 3px;
+                    width: inherit;
+
+                    @media #{$tablet}{
+                        font-size: .8rem;
+                    }
+
+                    @media #{$desktop}{
+                        font-size: 1rem;
+                    }
+                }
+
+                .policy-text{
+                    @include font(.2rem, 600);
+                    text-align: center;
+                    padding: .5rem 0;
+                    border-bottom: .5px solid rgb(226, 226, 226);
+                    letter-spacing: .5px;
+
+                    @media #{$tablet}{
+                        font-size: .4rem;
+                    }
+
+                    @media #{$desktop}{
+                        font-size: .6rem;
+                    }
+                }
+
+                #send-button{
+                    @include font(.5rem, 700);
+                    font-family: map-get($map: $fonts, $key: main-font);
+                    width: 5rem;
+                    height: 1.8rem;
+                    background-color: map-get($map: $colors, $key: second-color);
+                    border: none;
+                    box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
+                    margin: .5rem 0 0 0;
+                    border-radius: 5px;
+                    outline: none;
+                    appearance: none;
+
+                    @media #{$tablet}{
+                        width: 7rem;
+                        height: 2.5rem;
+                        font-size: .8rem;
+                    }
+
+                    @media #{$desktop}{
+                        width: 9rem;
+                        height: 3.3rem;
+                        font-size: 1rem
+                    }
+
+                    &:hover{
+                        background-color: #838175;
+                        transition: all .5s ease;
+                        transform: translateY(-15%);
+                    }
+                }
+                
+            }
+
+        }
+        
+        
+    }
+}
+
+//footer
+footer{
+    position: relative;
+    width: 100vw;
+    @include flex(center, center, column);
+    margin-top: 8%;
+
+    //yellow rectangle
+    &::before{
+        content: "";
+        position: relative;
+        width: 2rem;
+        height: .3rem;
+        left: -37.5%;
+        top: -1.5rem;
+        background-color: map-get($map: $colors, $key: second-color);
+        border-radius: 4px;
+
+        @media #{$desktop}{
+            left: -31%;
+            top: -3rem;
+            width: 3rem;
+            height: .5rem;
+        }
+    }
+
+    .footer-nav-container{
+        @include flex(space-between, normal, row);
+        position: relative;
+        width: 85%;
+        padding-bottom: 5%;
+        border-bottom: .1px solid rgb(168, 168, 168);
+
+        @media #{$tablet}{
+            width: 80%;
+        }
+
+        @media #{$desktop}{
+            width: 65%;
+        }
+    }
+    
+    //bottom nav sections
+    .footer-nav{
+        @include font(.55rem, 500);
+        
+        h4{
+            margin: 0 0 .4rem 0;
+        }
+
+        ul{
+            @include flex(normal, normal, column);
+            @include font(.4rem, 400);
+            list-style-type: none;
+            padding: 0;
+
+            li{
+                margin-top: .2rem;
+
+                a{
+                    color: black;
+                    text-decoration: none;
+
+                    &:visited{
+                        color: black;
+                        text-decoration: none;
+                    }
+
+                    &:hover{
+                        color: gray;
+                    }
+                }
+            }
+        }
+
+        @media #{$tablet}{
+            font-size: .9rem;
+
+            ul{
+                font-size: .7rem;
+            }
+        }
+
+        @media #{$desktop}{
+            font-size: .9rem;
+
+            ul{
+                font-size: .8rem;
+            }
+        }
+
+        .social-media-container{
+            @include flex (space-around, center, row);
+            margin-top: .5rem;
+
+            a{
+                div.instagram-icon{
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    position: relative;
+                }
+
+                div.facebook-icon{
+                    position: relative;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                }
+            }
+
+            @media #{$tablet}{
+                a{
+                    div.instagram-icon{
+                        width: 2.1rem;
+                        height: 2rem;
+                    }
+
+                    div.facebook-icon{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+
+            @media #{$desktop}{
+                a{
+                    div.instagram-icon{
+                        width: 2.34rem;
+                        height: 2.3rem;
+                    }
+
+                    div.facebook-icon{
+                        width: 2.2rem;
+                        height: 2.2rem;
+                    }
+                }
+            }
+        }
+        
+        .login{
+            position: relative;
+            display: block;
+            margin-top: .5rem;
+            a{
+                color: black;
+                text-decoration: none;
+
+                &:hover{
+                    color: gray;
+                }
+            }
+        }
+    }
+
+}
+.copyright{
+    margin: 3% 0;
+    @include font(.3rem, 500);
+    position: relative;
+    color: black;
+    display:block;
+    
+    @media #{$tablet}{
+        font-size: .6rem
+    }
+
+    @media #{$desktop}{
+        font-size: .9rem;
+    }
+}
+
+
+
+
+// ==> Handling all images on website for compatibility with browsers that doesn't suppot webp images <==  
+
+
+//no-support
+.no-webp {
+
+    header{
+        .logo{
+            background: url('../assets/logo.png') no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    main{
+        .first-container{
+
+            background: url("../assets/kotlet_tlo.png") repeat center;
+            background-size: cover;
+
+            &::before{
+                background: url("../assets/drugi_kotlet.png") no-repeat center;
+                background-size: cover;
+            }
+    
+            &::after{
+                background: url("../assets/kotlet.png") no-repeat center;
+                background-size: cover;
+            }
+        }
+    }
+
+    footer{
+        .footer-nav{
+            .social-media-container{
+                a{
+                    div.instagram-icon{
+                        background: url("../assets/instagram.png") no-repeat center;
+                        background-size: cover;
+                    }
+
+                    div.facebook-icon{
+                        background: url("../assets/facebook.png") no-repeat center;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+//support
+.webp {
+
+    header{
+        .logo{
+            background: url('../assets/logo.webp') no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    main{
+        .first-container{
+            
+            background: url("../assets/kotlet_tlo.webp") repeat center;
+            background-size: cover;
+
+            &::before{
+                background: url("../assets/drugi_kotlet.webp") no-repeat center;
+                background-size: cover;
+            }
+    
+            &::after{
+                background: url("../assets/kotlet.webp") no-repeat center;
+                background-size: cover;
+            }
+        }
+    }
+
+    footer{
+        .footer-nav{
+
+            .social-media-container{
+
+                a{
+                    .instagram-icon{
+                        background: url("../assets/instagram.webp") no-repeat center;
+                        background-size: cover;
+                    }
+                    
+                    .facebook-icon{
+                        background: url("../assets/facebook.webp") no-repeat center;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+}

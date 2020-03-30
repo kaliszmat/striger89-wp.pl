@@ -1,0 +1,167 @@
+@media only screen and (max-device-width: 800px) {
+  .mobile-menu {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mobile-menu .toggler {
+    width: 2.4rem;
+    height: 40px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .mobile-menu .toggler:checked ~ .hamburger > div {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-transform: rotate(135deg) scale(1.2);
+            transform: rotate(135deg) scale(1.2);
+  }
+  .mobile-menu .toggler:checked ~ .hamburger > div::before {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .mobile-menu .toggler:checked ~ .hamburger > div::after {
+    top: 0;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .mobile-menu .toggler:checked ~ .menu {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  .mobile-menu .hamburger {
+    width: 2.5rem;
+    height: 40px;
+    position: relative;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 3;
+  }
+  .mobile-menu .hamburger div {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: 1.5rem;
+    height: .25rem;
+    background-color: #383838;
+    border-radius: 50px;
+    position: relative;
+  }
+  .mobile-menu .hamburger div::before {
+    content: "";
+    width: 1.5rem;
+    height: inherit;
+    background-color: #383838;
+    position: absolute;
+    border-radius: 50px;
+    top: .5rem;
+  }
+  .mobile-menu .hamburger div::after {
+    content: "";
+    width: 1.5rem;
+    height: inherit;
+    background-color: #383838;
+    position: absolute;
+    border-radius: 50px;
+    top: -.5rem;
+  }
+  .mobile-menu .menu {
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    min-height: 100vh;
+    width: 100vw;
+    right: 0;
+    top: 0;
+    background-color: #fdf6d2c9;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+  .mobile-menu .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    top: 25vh;
+    left: 0;
+    font-weight: 500;
+    font-size: 2rem;
+    list-style: none;
+    z-index: 6;
+    opacity: 1;
+    color: #383838;
+  }
+  .mobile-menu .menu ul li {
+    z-index: 6;
+    padding: 1rem 0;
+    letter-spacing: 0.2rem;
+    border-bottom: .5px solid black;
+  }
+  .mobile-menu .menu ul li a {
+    color: #383838;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-device-width: 800px) {
+  .desktop-menu .menu {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .desktop-menu .menu ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .desktop-menu .menu ul li {
+    margin-right: 3rem;
+  }
+  .desktop-menu .menu ul li a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+  }
+  .desktop-menu .menu ul li a:hover {
+    -webkit-transition: color .5s ease;
+    transition: color .5s ease;
+    color: gray;
+  }
+}
+/*# sourceMappingURL=menu.css.map */

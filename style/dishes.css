@@ -1,0 +1,35 @@
+@media only screen and (max-width: 1024px){
+	main .second-container{
+		display: block;
+	}
+	main .second-container .form-container{
+		width: 70% !important;
+		margin-left: 15% !important;
+		margin-bottom: 2rem;
+	}
+	main .second-container .form-container .form-second-text{
+		width: auto;
+	}
+	
+}
+@media only screen and (max-width: 512px){
+	main .second-container .form-container .form-head-text{
+		font-size: 1.8rem;
+	}
+	main .second-container .form-container .form-second-text{
+		font-size: 1.2rem !important;
+	}
+
+}
+@media only screen and (max-width: 360px){
+	main .second-container .form-container .form-head-text{
+		font-size: 1.6rem;
+	}
+	main .second-container .form-container .form-second-text{
+		font-size: 1rem !important;
+	}
+	main .second-container .form-container img{
+		width: 70% !important;
+	}
+
+}
